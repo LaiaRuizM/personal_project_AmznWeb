@@ -1,0 +1,50 @@
+.landing {
+    background-image: url('../../images/landing2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 55%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__p {
+        // margin-bottom: 0 auto;
+        margin-left: 0 auto;
+        margin-bottom: 350px;
+        padding: 10px;
+        margin-left: 380px;
+        background: linear-gradient(to right, orange, #ec38bc, #7303c0, cyan);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 5px 5px 5px rgb(153, 151, 151);
+        text-decoration: none;
+        font-family: 'Indie Flower', cursive;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: auto;
+        margin-right: 280px;
+        margin-top: 180px;
+        padding: 10px;
+        // box-shadow: inset 0 0 0.1em rgb(94, 91, 91), 0 0 2em rgb(255, 255, 255);
+        // background: linear-gradient(to left, orange, #ec38bc, #7303c0, cyan);
+        background: linear-gradient(to left, orange, #000000);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 5px 5px 5px rgb(153, 151, 151);
+        text-decoration: none;
+        font-family: 'Indie Flower', cursive;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: center;
+        @media (min-width: 769px) {
+            font-size: 45px;
+        }
+    }
+}
+

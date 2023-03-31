@@ -1,0 +1,45 @@
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px dashed white;
+    height: 12vh;
+    @media (min-width: 700px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    &__text {
+        color: whitesmoke;
+        margin-top: 5px;
+        font-family:'Indie Flower', cursive;
+        letter-spacing: 1.5px;
+        @media (min-width: 768px) {
+            font-size: 20px;
+        }
+    }
+    &__logo {
+        height: 70px;
+        border-radius: 20px;
+        @media (min-width: 768px) {
+            height: 92px;
+        }
+    }
+    &__container {
+        display: flex;
+    }
+}
+.fa-brands {
+    color: rgb(242, 161, 74);
+    margin: 5px 0 0 10px;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(140%);
+    }
+    @media (min-width: 768px) {
+        font-size: 20px;
+    }
+}
