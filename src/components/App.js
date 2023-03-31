@@ -4,6 +4,7 @@ import callToApi from "../services/api";
 import Landing from "./Landing";
 import Header from "./Header";
 import Footer from "./Footer";
+import ProductList from "./ProductList";
 import "../styles/App.scss";
 
 function App() {
@@ -23,9 +24,7 @@ function App() {
           <Route path="/" element={<Landing />} />
         </Routes>
         <Header />
-        {productList.map((eachProduct) => {
-          return <li key={eachProduct.id}>{eachProduct.image}</li>;
-        })}
+        <ProductList productList={productList}></ProductList>
       </main>
       {<Footer></Footer>}
     </div>
