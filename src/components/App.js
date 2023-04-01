@@ -6,10 +6,13 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ProductList from "./ProductList";
 import ProductDetail from "./ProductDetail";
+import Filters from "./Filters";
 import "../styles/App.scss";
 
 function App() {
   const [productList, setProductList] = useState([]);
+  const [errorMsg, setErrorMsg] = useState(false);
+  const [nameFilter, setNameFilter] = useState("");
 
   useEffect(() => {
     console.log("callToApi()", callToApi());
@@ -22,6 +25,26 @@ function App() {
     ev.preventDefault();
   };
 
+  const handleNameFilter = (value) => {
+    setNameFilter(value);
+  };
+
+  const handleResetData = () => {
+    setNameFilter("");
+  };
+
+  const amazonFiltered = productList.filter((eachProduct) => {
+    return eachProduct.title
+      .toLocaleLowerCase()
+      .includes(nameFilter.toLocaleLowerCase());
+  });
+  // .sort((x, y) => x.title.localeCompare(y.title));
+  if (amazonFiltered.length > 0 && errorMsg) {
+    setErrorMsg(false);
+  } else if (amazonFiltered.length === 0 && !errorMsg) {
+    setErrorMsg(true);
+  }
+
   return (
     <div>
       <main className="main">
@@ -32,7 +55,17 @@ function App() {
             element={
               <>
                 <Header />
-                <ProductList productList={productList}></ProductList>
+                <Filters
+                  nameFilter={nameFilter}
+                  handleNameFilter={handleNameFilter}
+                  handleResetData={handleResetData}
+                ></Filters>
+                <ProductList
+                  productList={productList}
+                  errorMsg={errorMsg}
+                  nameFilter={nameFilter}
+                  handleNameFilter={handleNameFilter}
+                ></ProductList>
               </>
             }
           ></Route>

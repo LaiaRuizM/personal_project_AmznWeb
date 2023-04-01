@@ -5,12 +5,9 @@
     width: 100%;
     padding-top: 15px;
     padding-left: 15px;
-    // background: linear-gradient(to right, rgb(61, 61, 60), #000000);
-    //background: black;
     background: linear-gradient(to right, rgb(236, 236, 229), #000000);
     &__img {
         width: 8vw;
-        // padding: 20px 0;
         &:hover {
             -webkit-transform: rotateY(180deg);
             -webkit-transform-style: preserve-3d;
@@ -23,6 +20,7 @@
         font-weight: 900;
         font-size: 20px;
         font-style: italic;
+        text-align: center;
         &:hover {
             background: linear-gradient(to left, #b47dcd, #e878a2, #eb85ab, #00ffff, #ffc800);
         }
