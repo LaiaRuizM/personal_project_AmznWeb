@@ -5,6 +5,7 @@ import Landing from "./Landing";
 import Header from "./Header";
 import Footer from "./Footer";
 import ProductList from "./ProductList";
+import ProductDetail from "./ProductDetail";
 import "../styles/App.scss";
 
 function App() {
@@ -17,14 +18,35 @@ function App() {
     });
   }, []);
 
+  const handleOnSubmit = (ev) => {
+    ev.preventDefault();
+  };
+
   return (
     <div>
       <main className="main">
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route
+            path="/products"
+            element={
+              <>
+                <Header />
+                <ProductList productList={productList}></ProductList>
+              </>
+            }
+          ></Route>
+          <Route
+            path="/product/:productId"
+            element={
+              <ProductDetail
+                productList={productList}
+                selectProductFound
+                handleOnSubmit={handleOnSubmit}
+              ></ProductDetail>
+            }
+          ></Route>
         </Routes>
-        <Header />
-        <ProductList productList={productList}></ProductList>
       </main>
       {<Footer></Footer>}
     </div>

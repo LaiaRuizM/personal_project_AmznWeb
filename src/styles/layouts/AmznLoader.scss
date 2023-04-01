@@ -1,0 +1,106 @@
+.loader__container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+
+    @media all and (min-width: 768px) {
+        width: 80vw;
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+.load__ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    left: 45%;
+    top: 10rem;
+
+    @media all and (min-width: 768px) {
+        width: 80px;
+        height: 80px;
+        left: 54%;
+        top: 13rem;
+    }
+
+    @media all and (min-width: 1024px) {
+        left: 59%;
+    }
+}
+
+.animation {
+    width: 40rem;
+    position: relative;
+    right: 16rem;
+    bottom: 18.5rem;
+
+    @media all and (min-width: 768px) {
+        width: 55rem;
+        position: relative;
+        right: 22.5rem;
+        bottom: 26.5rem;
+    }
+}
+
+.load__ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.load__ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: load__ellipsis1 0.8s infinite;
+}
+
+.load__ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: load__ellipsiss2 0.8s infinite;
+}
+
+.load__ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: load__ellipsis2 0.8s infinite;
+}
+
+.load__ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: load__ellipsis3 0.8s infinite;
+}
+
+@keyframes load__ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes load__ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes load__ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}

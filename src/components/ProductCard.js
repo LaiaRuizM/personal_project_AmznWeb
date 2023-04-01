@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import "../styles/layouts/ProductCard.scss";
 const ProductCard = ({ eachProduct }) => {
   return (
-    <Link className="list__link" to={`/character/${eachProduct.id}`}>
+    <Link className="list__link" to={`/product/${eachProduct.id}`}>
       <li className="list__li">
-        <span className="span">DETAILS⚡️</span>
+        <span className="span">DETAILS</span>
         <div className="div">
           <img
             className="img"

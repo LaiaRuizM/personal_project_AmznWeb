@@ -23,17 +23,17 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link className="nav__link" to={"/"}>
+            <Link className="nav__link" to={"/products"}>
               Products
             </Link>
           </li>
           <li>
-            <Link className="nav__link" to={"/"}>
+            <Link className="nav__link" to={"/products"}>
               Account
             </Link>
           </li>
           <li>
-            <Link className="nav__link" to={"/"}>
+            <Link className="nav__link" to={"/products"}>
               Shopping card
             </Link>
           </li>
