@@ -1,16 +1,9 @@
 import { Link, useLocation, matchPath } from "react-router-dom";
-// import gryffindor from "../images/gryffindor.png";
-// import hufflepuff from "../images/hufflepuff.png";
 import "../styles/layouts/ProductDetail.scss";
 import LoadingAmzn from "./LoadingAmzn";
 
 const ProductDetail = ({ productList, handleOnSubmit }) => {
   console.log("ProductDetail.productList: ", JSON.stringify(productList));
-
-  // const imgEachProd = {
-  //   gryffindor: gryffindor,
-  //   hufflepuff: hufflepuff,
-  // };
   const { pathname } = useLocation();
   const routeData = matchPath("/product/:productId", pathname);
   const productId = routeData !== null ? routeData.params.productId : null;
@@ -42,12 +35,6 @@ const ProductDetail = ({ productList, handleOnSubmit }) => {
           <article />
           <h2 className="productDetails__title">{selectProductFound.title}</h2>
           <ul className="productDetails__information">
-            {/* <li>
-              Alternate title:{" "}
-              {selectProductFound.title.join(" or ")
-                ? selectProductFound.title.join(" or ")
-                : " Amazing... This product does not have any alternate title"}
-            </li> */}
             <li>
               Status:{" "}
               {selectProductFound.price ? (
@@ -58,12 +45,6 @@ const ProductDetail = ({ productList, handleOnSubmit }) => {
             </li>
             <li>price: {selectProductFound.price}</li>
             <li>title: {selectProductFound.title}</li>
-            {/* <li>price: {selectProductFound.price}</li> */}
-            {/* <img
-              className="product"
-              src={imgEachProd[selectProductFound.image.toLocaleLowerCase()]}
-              alt={selectProductFound.image}
-            /> */}
           </ul>
           <div>
             <form className="form" onSubmit={handleOnSubmit}>
