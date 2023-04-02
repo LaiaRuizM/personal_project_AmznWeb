@@ -33,12 +33,13 @@ function App() {
     setNameFilter("");
   };
 
-  const amazonFiltered = productList.filter((eachProduct) => {
-    return eachProduct.title
-      .toLocaleLowerCase()
-      .includes(nameFilter.toLocaleLowerCase());
-  });
-  // .sort((x, y) => x.title.localeCompare(y.title));
+  const amazonFiltered = productList
+    .filter((eachProduct) => {
+      return eachProduct.title
+        .toLocaleLowerCase()
+        .includes(nameFilter.toLocaleLowerCase());
+    })
+    .sort((x, y) => x.title.localeCompare(y.title));
   if (amazonFiltered.length > 0 && errorMsg) {
     setErrorMsg(false);
   } else if (amazonFiltered.length === 0 && !errorMsg) {
@@ -61,7 +62,7 @@ function App() {
                   handleResetData={handleResetData}
                 ></Filters>
                 <ProductList
-                  productList={productList}
+                  amazonFiltered={amazonFiltered}
                   errorMsg={errorMsg}
                   nameFilter={nameFilter}
                   handleNameFilter={handleNameFilter}

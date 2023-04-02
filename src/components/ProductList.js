@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 import "../styles/layouts/ProductList.scss";
 
 const ProductList = ({
-  productList,
+  amazonFiltered,
   errorMsg,
   nameFilter,
   handleNameFilter,
@@ -12,7 +12,7 @@ const ProductList = ({
     const value = event.target.value;
     handleNameFilter(value);
   };
-  const prodHtml = productList.map((eachProduct) => {
+  const prodHtml = amazonFiltered.map((eachProduct) => {
     return (
       <ProductCard eachProduct={eachProduct} key={eachProduct.id}></ProductCard>
     );
