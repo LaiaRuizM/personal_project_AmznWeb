@@ -17,19 +17,19 @@ const Header = () => {
             alt="Amazon's logo"
             title="Amazon's logo"
           />
-          <li>
+          {/* <li>
             <Link className="nav__link" to={"/"}>
-              Inicio
+              Return home
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link className="nav__link" to={"/products"}>
               Products
             </Link>
           </li>
           <li>
-            <Link className="nav__link" to={"/products"}>
-              Account
+            <Link className="nav__link" to={"/loginAccount"}>
+              Login account
             </Link>
           </li>
           <li>

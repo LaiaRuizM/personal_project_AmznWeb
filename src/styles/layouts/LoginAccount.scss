@@ -1,0 +1,34 @@
+// .textLogin {
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+// margin-left: 20px;
+// border: 5px solid cyan;
+// } => en el LABEL 
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    width: 90px;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-top: 10px;
+    background: linear-gradient(to right, #000000, rgb(236, 236, 229));
+    font-size: 12px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 1.5px;
+    cursor: move;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: linear-gradient(to right, orange, #ec38bc, #7303c0, cyan);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+}

@@ -7,12 +7,15 @@ import Footer from "./Footer";
 import ProductList from "./ProductList";
 import ProductDetail from "./ProductDetail";
 import Filters from "./Filters";
+import LoginAccount from "./LoginAccount";
 import "../styles/App.scss";
 
 function App() {
   const [productList, setProductList] = useState([]);
   const [errorMsg, setErrorMsg] = useState(false);
   const [nameFilter, setNameFilter] = useState("");
+  // const [username, setUsername] = useState("");
+  // const [password, setPassword] = useState("");
 
   useEffect(() => {
     console.log("callToApi()", callToApi());
@@ -80,6 +83,7 @@ function App() {
               ></ProductDetail>
             }
           ></Route>
+          <Route path="/loginAccount" element={<LoginAccount />}></Route>
         </Routes>
       </main>
       {<Footer></Footer>}
