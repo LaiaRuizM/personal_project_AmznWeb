@@ -16,6 +16,10 @@ const ProductDetail = ({ productList, handleOnSubmit }) => {
   if (productList.length === 0) {
     return <LoadingAmzn></LoadingAmzn>;
   }
+  const handleAddToCart = (ev) => {
+    ev.preventDefault();
+    console.log("funciona");
+  };
   return selectProductFound ? (
     <>
       <div className="box">
@@ -37,15 +41,15 @@ const ProductDetail = ({ productList, handleOnSubmit }) => {
           <ul className="productDetails__information">
             <li>
               Status:{" "}
-              {selectProductFound.price ? (
-                <i class="fa-solid fa-heart-pulse"></i>
-              ) : (
-                <i class="fa-solid fa-skull"></i>
-              )}
+              {selectProductFound.price
+                ? "Available"
+                : "Temporarily out of stock"}
             </li>
-            <li>price: {selectProductFound.price}</li>
-            <li>title: {selectProductFound.title}</li>
+            <li>price: {selectProductFound.price + " " + "$"}</li>
           </ul>
+          <button className="button" onClick={handleAddToCart}>
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </button>
           <div>
             <form className="form" onSubmit={handleOnSubmit}>
               <label className="form__label">

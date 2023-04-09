@@ -6,35 +6,36 @@ const Header = () => {
     <>
       <header className="header">
         <Link to={"/"}>
-          <i className="fa-solid fa-angles-left arrow"> Back Home</i>
-        </Link>
-      </header>
-      <nav className="nav">
-        <ul className="nav__lists">
+          {/* <i className="fa-solid fa-angles-left arrow"> Back Home</i> */}
           <img
             className="header__img"
             src={logoAmzn}
             alt="Amazon's logo"
             title="Amazon's logo"
           />
-          {/* <li>
-            <Link className="nav__link" to={"/"}>
-              Return home
-            </Link>
-          </li> */}
+        </Link>
+      </header>
+      <nav className="nav">
+        <ul className="nav__lists">
+          {/* <img
+            className="header__img"
+            src={logoAmzn}
+            alt="Amazon's logo"
+            title="Amazon's logo"
+          /> */}
           <li>
             <Link className="nav__link" to={"/products"}>
-              Products
+              <i class="fa-solid fa-list"></i> Products
             </Link>
           </li>
           <li>
             <Link className="nav__link" to={"/loginAccount"}>
-              Login account
+              <i class="fa-regular fa-user"></i> Login account
             </Link>
           </li>
           <li>
-            <Link className="nav__link" to={"/products"}>
-              Shopping card
+            <Link className="nav__link" to={"/shoppingCart"}>
+              <i class="fa-solid fa-cart-shopping"></i> Shopping cart
             </Link>
           </li>
         </ul>

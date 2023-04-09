@@ -8,12 +8,14 @@ import ProductList from "./ProductList";
 import ProductDetail from "./ProductDetail";
 import Filters from "./Filters";
 import LoginAccount from "./LoginAccount";
+import ShoppingCart from "./ShoppingCart";
 import "../styles/App.scss";
 
 function App() {
   const [productList, setProductList] = useState([]);
   const [errorMsg, setErrorMsg] = useState(false);
   const [nameFilter, setNameFilter] = useState("");
+  const addedToCart = [];
   // const [username, setUsername] = useState("");
   // const [password, setPassword] = useState("");
 
@@ -65,10 +67,11 @@ function App() {
                   handleResetData={handleResetData}
                 ></Filters>
                 <ProductList
-                  amazonFiltered={amazonFiltered}
+                  productsToDisplay={amazonFiltered}
                   errorMsg={errorMsg}
                   nameFilter={nameFilter}
                   handleNameFilter={handleNameFilter}
+                  addedToCart={addedToCart}
                 ></ProductList>
               </>
             }
@@ -84,6 +87,16 @@ function App() {
             }
           ></Route>
           <Route path="/loginAccount" element={<LoginAccount />}></Route>
+          <Route
+            path="/shoppingCart"
+            element={
+              <ShoppingCart
+                productList={productList}
+                handleOnSubmit={handleOnSubmit}
+                addedToCart={addedToCart}
+              />
+            }
+          ></Route>
         </Routes>
       </main>
       {<Footer></Footer>}

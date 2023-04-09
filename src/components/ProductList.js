@@ -2,19 +2,25 @@ import ProductCard from "./ProductCard";
 import "../styles/layouts/ProductList.scss";
 
 const ProductList = ({
-  amazonFiltered,
+  productsToDisplay,
   errorMsg,
   nameFilter,
   handleNameFilter,
+  addedToCart,
 }) => {
   const handleReset = (event) => {
     event.preventDefault();
     const value = event.target.value;
     handleNameFilter(value);
   };
-  const prodHtml = amazonFiltered.map((eachProduct) => {
+
+  const prodHtml = productsToDisplay.map((eachProduct) => {
     return (
-      <ProductCard eachProduct={eachProduct} key={eachProduct.id}></ProductCard>
+      <ProductCard
+        eachProduct={eachProduct}
+        key={eachProduct.id}
+        addedToCart={addedToCart}
+      ></ProductCard>
     );
   });
   return (
