@@ -84,6 +84,7 @@ function App() {
                 productList={productList}
                 selectProductFound
                 handleOnSubmit={handleOnSubmit}
+                addedToCart={addedToCart}
               ></ProductDetail>
             }
           ></Route>

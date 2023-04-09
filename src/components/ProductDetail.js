@@ -2,7 +2,7 @@ import { Link, useLocation, matchPath } from "react-router-dom";
 import "../styles/layouts/ProductDetail.scss";
 import LoadingAmzn from "./LoadingAmzn";
 
-const ProductDetail = ({ productList, handleOnSubmit }) => {
+const ProductDetail = ({ productList, handleOnSubmit, addedToCart }) => {
   console.log("ProductDetail.productList: ", JSON.stringify(productList));
   const { pathname } = useLocation();
   const routeData = matchPath("/product/:productId", pathname);
@@ -16,9 +16,10 @@ const ProductDetail = ({ productList, handleOnSubmit }) => {
   if (productList.length === 0) {
     return <LoadingAmzn></LoadingAmzn>;
   }
-  const handleAddToCart = (ev) => {
+  const handleAddToCart = (ev, productToBeAdded) => {
     ev.preventDefault();
-    console.log("funciona");
+    addedToCart.push(productToBeAdded);
+    console.log("funciona, my list is: ", JSON.stringify(addedToCart));
   };
   return selectProductFound ? (
     <>
@@ -54,7 +55,10 @@ const ProductDetail = ({ productList, handleOnSubmit }) => {
             </li>
             <li>price: {selectProductFound.price + " " + "$"}</li>
           </ul>
-          <button className="button" onClick={handleAddToCart}>
+          <button
+            className="button"
+            onClick={(ev) => handleAddToCart(ev, selectProductFound)}
+          >
             Add to cart <i class="fa-solid fa-cart-shopping"></i>
           </button>
           <div>
