@@ -8,7 +8,6 @@ const ShoppingCart = ({
   showButtonCart,
   handleResetShoppingCart,
 }) => {
-  // const [addedToCardState, setAddedToCardState] = useState(addedToCart);
   const handleResetCart = (ev) => {
     ev.preventDefault();
     handleResetShoppingCart();

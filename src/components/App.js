@@ -9,6 +9,7 @@ import ProductDetail from "./ProductDetail";
 import Filters from "./Filters";
 import LoginAccount from "./LoginAccount";
 import ShoppingCart from "./ShoppingCart";
+import Welcome from "./Welcome";
 import "../styles/App.scss";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   const [errorMsg, setErrorMsg] = useState(false);
   const [nameFilter, setNameFilter] = useState("");
   const [addedToCart, setAddedToCart] = useState([]);
-  // const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("");
   // const [password, setPassword] = useState("");
 
   useEffect(() => {
@@ -40,6 +41,10 @@ function App() {
 
   const handleResetShoppingCart = () => {
     setAddedToCart([]);
+  };
+
+  const handleUsername = (value) => {
+    setUsername(value);
   };
 
   const addProductToShoppingCart = (product) => {
@@ -98,7 +103,16 @@ function App() {
               ></ProductDetail>
             }
           ></Route>
-          <Route path="/loginAccount" element={<LoginAccount />}></Route>
+          <Route
+            path="/loginAccount"
+            element={
+              <LoginAccount
+                username={username}
+                handleUsername={handleUsername}
+                errorMsg={errorMsg}
+              />
+            }
+          ></Route>
           <Route
             path="/shoppingCart"
             element={
@@ -110,6 +124,16 @@ function App() {
                 setAddedToCart={setAddedToCart}
                 handleResetShoppingCart={handleResetShoppingCart}
               />
+            }
+          ></Route>
+          <Route
+            path="/welcome"
+            element={
+              <Welcome
+                username={username}
+                errorMsg={errorMsg}
+                handleUsername={handleUsername}
+              ></Welcome>
             }
           ></Route>
         </Routes>
