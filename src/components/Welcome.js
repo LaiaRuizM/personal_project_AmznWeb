@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../styles/layouts/Welcome.scss";
 const Welcome = ({ username, handleUsername, errorMsg }) => {
   const handleChange = (ev) => {
     const value = ev.target.value;
@@ -11,7 +12,7 @@ const Welcome = ({ username, handleUsername, errorMsg }) => {
         <button type="submit" className="login" onClick={handleChange}>
           Sign out
         </button>
-        <p>Welcome back {username}</p>
+        <p className="parragraph">Welcome back {username}</p>
       </Link>
       {errorMsg && (
         <>

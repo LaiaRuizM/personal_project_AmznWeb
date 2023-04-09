@@ -13,6 +13,10 @@ const LoginAccount = ({ username, handleUsername, errorMsg }) => {
     const value = ev.target.value;
     handleUsername(value);
   };
+  const handleInputPasswordChange = (ev) => {
+    const value = ev.target.value;
+    setPassword(value);
+  };
   return (
     <>
       <div className="">
@@ -36,16 +40,16 @@ const LoginAccount = ({ username, handleUsername, errorMsg }) => {
           <input
             type="password"
             value={password}
-            onChange={() => {}}
+            onChange={handleInputPasswordChange}
             className="share"
           />
         </label>
         <Link to={"/welcome"} className="link">
-          <input type="submit" value="Sign in"></input>
+          <input type="submit" value="Sign in" className="login"></input>
         </Link>
         {errorMsg && (
           <>
-            <p>The username {username} or password provider were incorrect </p>
+            <p>The username or password provided were incorrect or are empty</p>
           </>
         )}
       </form>

@@ -1,0 +1,19 @@
+.section__warning {
+    padding-top: 100px;
+    margin: 30px;
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 1px red;
+    padding-left: 20px;
+    width: auto;
+    background-image: url('../../images/notFound.png');
+    background-repeat: no-repeat;
+    background-position: 55%;
+    background-size: contain;
+    height: 100vh;
+
+    &--span {
+        padding-left: 50px;
+    }
+}

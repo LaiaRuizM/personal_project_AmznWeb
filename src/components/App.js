@@ -10,6 +10,7 @@ import Filters from "./Filters";
 import LoginAccount from "./LoginAccount";
 import ShoppingCart from "./ShoppingCart";
 import Welcome from "./Welcome";
+import ErrorPageNotFound from "./ErrorPageNotFound";
 import "../styles/App.scss";
 
 function App() {
@@ -18,7 +19,6 @@ function App() {
   const [nameFilter, setNameFilter] = useState("");
   const [addedToCart, setAddedToCart] = useState([]);
   const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
 
   useEffect(() => {
     console.log("callToApi()", callToApi());
@@ -135,6 +135,10 @@ function App() {
                 handleUsername={handleUsername}
               ></Welcome>
             }
+          ></Route>
+          <Route
+            path="*"
+            element={<ErrorPageNotFound></ErrorPageNotFound>}
           ></Route>
         </Routes>
       </main>

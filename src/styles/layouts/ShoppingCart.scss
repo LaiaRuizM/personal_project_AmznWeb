@@ -28,12 +28,11 @@
                 background: linear-gradient(to right, #000000, #494748, #eaeaea,#ffffff, #f2a14a, #ffae00);
             }
     }
-    &__ p {
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.5;
-    }
 }
 
-
+.noprod {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}

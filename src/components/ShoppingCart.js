@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import ProductList from "./ProductList";
 import "../styles/layouts/ShoppingCart.scss";
@@ -36,7 +35,7 @@ const ShoppingCart = ({
             showButtonCart={showButtonCart}
           ></ProductList>
         ) : (
-          <p className="shopping__p">No products in shopping cart</p>
+          <p className="noprod">No products in shopping cart</p>
         )}
       </div>
     </>
