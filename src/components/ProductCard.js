@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/layouts/ProductCard.scss";
-const ProductCard = ({ eachProduct, addedToCart }) => {
+const ProductCard = ({ eachProduct, addedToCart, showButtonCart }) => {
   const handleAddToCart = (ev, productToBeAdded) => {
     ev.preventDefault();
     addedToCart.push(productToBeAdded);
@@ -20,12 +20,14 @@ const ProductCard = ({ eachProduct, addedToCart }) => {
         </div>
         <h4 className="list__title">{eachProduct.title}</h4>
         <p className="list__p">{eachProduct.price + " " + "$"}</p>
-        <button
-          className="button"
-          onClick={(ev) => handleAddToCart(ev, eachProduct)}
-        >
-          Add to cart <i class="fa-solid fa-cart-shopping"></i>
-        </button>
+        {showButtonCart && (
+          <button
+            className="button"
+            onClick={(ev) => handleAddToCart(ev, eachProduct)}
+          >
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        )}
       </li>
     </Link>
   );

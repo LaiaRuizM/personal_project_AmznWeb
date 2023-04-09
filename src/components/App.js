@@ -72,6 +72,7 @@ function App() {
                   nameFilter={nameFilter}
                   handleNameFilter={handleNameFilter}
                   addedToCart={addedToCart}
+                  showButtonCart={true}
                 ></ProductList>
               </>
             }
@@ -94,6 +95,7 @@ function App() {
                 productList={productList}
                 handleOnSubmit={handleOnSubmit}
                 addedToCart={addedToCart}
+                showButtonCart={false}
               />
             }
           ></Route>

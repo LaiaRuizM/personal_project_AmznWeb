@@ -64,19 +64,13 @@
     color: transparent;
     text-shadow: 2px 4px 12px rgb(0, 0, 0);
 }
-.fa-heart-pulse{
+.fa-angles-right {
     background: linear-gradient(to right, orange, #ec38bc, #7303c0, cyan);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    text-shadow: 2px 4px 12px rgb(0, 0, 0);
 }
-.fa-skull{
-    background: linear-gradient(to right, #101111, #767d7b, #f5fffc);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
 .form {
     display: flex;
     flex-direction: column;

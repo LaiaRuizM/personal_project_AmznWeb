@@ -7,6 +7,7 @@ const ProductList = ({
   nameFilter,
   handleNameFilter,
   addedToCart,
+  showButtonCart,
 }) => {
   const handleReset = (event) => {
     event.preventDefault();
@@ -20,6 +21,7 @@ const ProductList = ({
         eachProduct={eachProduct}
         key={eachProduct.id}
         addedToCart={addedToCart}
+        showButtonCart={showButtonCart}
       ></ProductCard>
     );
   });

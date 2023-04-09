@@ -24,7 +24,14 @@ const ProductDetail = ({ productList, handleOnSubmit }) => {
     <>
       <div className="box">
         <Link className="box__link" to={"/products"}>
-          <i className="fa-solid fa-angles-left"> Go back </i>
+          <i className="fa-solid fa-angles-left"> Go back to products</i>
+        </Link>
+      </div>
+      <div className="box">
+        <Link className="box__link" to={"/shoppingCart"}>
+          <i className="fa-solid fa-angles-right">
+            {""} Return to cart <i class="fa-solid fa-cart-shopping"></i>
+          </i>
         </Link>
       </div>
       <section className="productDetails">

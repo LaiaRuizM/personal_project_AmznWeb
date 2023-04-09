@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import ProductList from "./ProductList";
 import "../styles/layouts/ShoppingCart.scss";
 
-const ShoppingCart = ({ addedToCart }) => {
+const ShoppingCart = ({ addedToCart, showButtonCart }) => {
   return (
     <>
       <Link to={"/products"} className="link">
@@ -16,6 +16,7 @@ const ShoppingCart = ({ addedToCart }) => {
           <ProductList
             productsToDisplay={addedToCart}
             addedToCart={addedToCart}
+            showButtonCart={showButtonCart}
           ></ProductList>
         ) : (
           <p className="product-p">No products in shopping cart</p>

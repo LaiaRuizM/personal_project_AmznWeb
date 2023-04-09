@@ -6,7 +6,6 @@ const Header = () => {
     <>
       <header className="header">
         <Link to={"/"}>
-          {/* <i className="fa-solid fa-angles-left arrow"> Back Home</i> */}
           <img
             className="header__img"
             src={logoAmzn}
@@ -17,12 +16,6 @@ const Header = () => {
       </header>
       <nav className="nav">
         <ul className="nav__lists">
-          {/* <img
-            className="header__img"
-            src={logoAmzn}
-            alt="Amazon's logo"
-            title="Amazon's logo"
-          /> */}
           <li>
             <Link className="nav__link" to={"/products"}>
               <i class="fa-solid fa-list"></i> Products
