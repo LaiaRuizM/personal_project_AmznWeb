@@ -6,8 +6,8 @@ const ProductList = ({
   errorMsg,
   nameFilter,
   handleNameFilter,
-  addedToCart,
   showButtonCart,
+  addProductToShoppingCart,
 }) => {
   const handleReset = (event) => {
     event.preventDefault();
@@ -20,8 +20,8 @@ const ProductList = ({
       <ProductCard
         eachProduct={eachProduct}
         key={eachProduct.id}
-        addedToCart={addedToCart}
         showButtonCart={showButtonCart}
+        addProductToShoppingCart={addProductToShoppingCart}
       ></ProductCard>
     );
   });

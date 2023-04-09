@@ -15,7 +15,7 @@ function App() {
   const [productList, setProductList] = useState([]);
   const [errorMsg, setErrorMsg] = useState(false);
   const [nameFilter, setNameFilter] = useState("");
-  const addedToCart = [];
+  const [addedToCart, setAddedToCart] = useState([]);
   // const [username, setUsername] = useState("");
   // const [password, setPassword] = useState("");
 
@@ -36,6 +36,16 @@ function App() {
 
   const handleResetData = () => {
     setNameFilter("");
+  };
+
+  const handleResetShoppingCart = () => {
+    setAddedToCart([]);
+  };
+
+  const addProductToShoppingCart = (product) => {
+    const tempAddedToCart = addedToCart;
+    tempAddedToCart.push(product);
+    setAddedToCart(tempAddedToCart);
   };
 
   const amazonFiltered = productList
@@ -71,8 +81,8 @@ function App() {
                   errorMsg={errorMsg}
                   nameFilter={nameFilter}
                   handleNameFilter={handleNameFilter}
-                  addedToCart={addedToCart}
                   showButtonCart={true}
+                  addProductToShoppingCart={addProductToShoppingCart}
                 ></ProductList>
               </>
             }
@@ -84,7 +94,7 @@ function App() {
                 productList={productList}
                 selectProductFound
                 handleOnSubmit={handleOnSubmit}
-                addedToCart={addedToCart}
+                addProductToShoppingCart={addProductToShoppingCart}
               ></ProductDetail>
             }
           ></Route>
@@ -97,6 +107,8 @@ function App() {
                 handleOnSubmit={handleOnSubmit}
                 addedToCart={addedToCart}
                 showButtonCart={false}
+                setAddedToCart={setAddedToCart}
+                handleResetShoppingCart={handleResetShoppingCart}
               />
             }
           ></Route>

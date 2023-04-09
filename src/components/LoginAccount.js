@@ -20,6 +20,7 @@ const LoginAccount = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setIsError("");
   };
 
   return (
@@ -28,7 +29,6 @@ const LoginAccount = () => {
         <Link to={"/products"} className="link">
           <i className="fa-solid fa-angles-left arrow"> Back products</i>
         </Link>
-        {/* <p className=""> Enjoy it!</p> */}
       </div>
       <form className="form" onSubmit={handleSubmit}>
         <label className="form__label">

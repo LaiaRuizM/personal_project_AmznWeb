@@ -2,8 +2,11 @@ import { Link, useLocation, matchPath } from "react-router-dom";
 import "../styles/layouts/ProductDetail.scss";
 import LoadingAmzn from "./LoadingAmzn";
 
-const ProductDetail = ({ productList, handleOnSubmit, addedToCart }) => {
-  console.log("ProductDetail.productList: ", JSON.stringify(productList));
+const ProductDetail = ({
+  productList,
+  handleOnSubmit,
+  addProductToShoppingCart,
+}) => {
   const { pathname } = useLocation();
   const routeData = matchPath("/product/:productId", pathname);
   const productId = routeData !== null ? routeData.params.productId : null;
@@ -18,8 +21,7 @@ const ProductDetail = ({ productList, handleOnSubmit, addedToCart }) => {
   }
   const handleAddToCart = (ev, productToBeAdded) => {
     ev.preventDefault();
-    addedToCart.push(productToBeAdded);
-    console.log("funciona, my list is: ", JSON.stringify(addedToCart));
+    addProductToShoppingCart(productToBeAdded);
   };
   return selectProductFound ? (
     <>

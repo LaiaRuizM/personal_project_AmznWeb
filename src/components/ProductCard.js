@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import "../styles/layouts/ProductCard.scss";
-const ProductCard = ({ eachProduct, addedToCart, showButtonCart }) => {
+const ProductCard = ({
+  eachProduct,
+  showButtonCart,
+  addProductToShoppingCart,
+}) => {
   const handleAddToCart = (ev, productToBeAdded) => {
     ev.preventDefault();
-    addedToCart.push(productToBeAdded);
-    console.log("funciona, my list is: ", JSON.stringify(addedToCart));
+    addProductToShoppingCart(productToBeAdded);
   };
   return (
     <Link className="list__link" to={`/product/${eachProduct.id}`}>

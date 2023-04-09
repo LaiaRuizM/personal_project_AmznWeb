@@ -1,17 +1,35 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import ProductList from "./ProductList";
 import "../styles/layouts/ShoppingCart.scss";
 
-const ShoppingCart = ({ addedToCart, showButtonCart }) => {
+const ShoppingCart = ({
+  addedToCart,
+  showButtonCart,
+  handleResetShoppingCart,
+}) => {
+  // const [addedToCardState, setAddedToCardState] = useState(addedToCart);
+  const handleResetCart = (ev) => {
+    ev.preventDefault();
+    handleResetShoppingCart();
+  };
   return (
     <>
       <Link to={"/products"} className="link">
         <i className="fa-solid fa-angles-left arrow"> Back products</i>
       </Link>
-      <div className="shopping-card">
-        <h2 className="shopping-title">
-          <i class="fa-solid fa-cart-shopping"></i> Shopping Cart
+      <div className="shopping">
+        <h2 className="shopping__title">
+          <i class="fa-solid fa-cart-shopping"></i> Your products added in
+          Shopping Cart
         </h2>
+        <input
+          className="reset__btn"
+          type="button"
+          value="Reset"
+          title="Press here to delete and re-start your information!"
+          onClick={handleResetCart}
+        />
         {addedToCart.length > 0 ? (
           <ProductList
             productsToDisplay={addedToCart}
@@ -19,7 +37,7 @@ const ShoppingCart = ({ addedToCart, showButtonCart }) => {
             showButtonCart={showButtonCart}
           ></ProductList>
         ) : (
-          <p className="product-p">No products in shopping cart</p>
+          <p className="shopping__p">No products in shopping cart</p>
         )}
       </div>
     </>
