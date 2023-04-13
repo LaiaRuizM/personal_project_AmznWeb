@@ -1,9 +1,9 @@
 ![Laia Ruiz Martínez](src/images/Laia.png)
 
-# MODULE 3 | REACT - FINAL EVALUATION EXERCISE
+# FINAL PROJECT | PRESENTATION OF THE FINAL PROJECT
 
 - Hi there people! 👋🏻
-- My name is Laia Ruiz Martínez and this is my Harry Potter's ⚡ final evaluation exercise.
+- My name is Laia Ruiz Martínez and this is my first personal project which I have to expose the final day of Adalab's course.
 
 ## 🛠 | Tools and programming languages:
 
@@ -24,23 +24,31 @@
 
 ## -- About this project 🙋🏼‍♀️ --
 
-- In this exercise I have created a web page to search for Harry Potter characters.
-- When the page loads, a list appears with characters from Gryffindor'S house preselected. - This offers the possibility of display the characters of all the houses, sorting them alphabetically, filtering by gender and / or by name.
-- When the user clicks on one of them (on one card, pressing "Details⚡"), users can see a new page with details about the person who was clicked on.
+- In this project I have created a web page to search for Amazon products.
+- When the page loads, a list appears with products. - This offers the possibility of display the different available products, sorting them alphabetically, filtering by category, by name.
+- When the user clicks on one of them (on one product, pressing "Details"), users can see a new page with details about the product which has been clicked on.
 - Also, there is an option to share the link on this detail's section!
 - I hope you like it!
 
 ## -- Challenges I have faced 🤖 --
 
-- The challenge was to show the Loader in CharacterDetail because it appears a few seconds.
+- The challenge was to add the products in Shopping cart because it duplicates the data.
 
 ## -- Features to implement in the future 🤓 🔁 --
 
 - LocalStorage.
+- Loader: more time.
+- Create new account with validations if the email has already exist.
+- Add favorites and delete them.
+- In shopping cart: Make a table, add up the products prices, add filters, put it as a table and put a number in the shopping cart when the user add some product there.
+- Make an own API.
+- Logout and login with funcionality and validations.
+- History prices.
+- Login: The error appears quickly, make it appear more time.
 
-## -- Project Link: --
+<!-- ## -- Project Link: --
 
-http://beta.adalab.es/modulo-3-evaluacion-final-LaiaRuizM/
+http:// -->
 
 ## -- Contact me! --
 
@@ -53,7 +61,7 @@ http://beta.adalab.es/modulo-3-evaluacion-final-LaiaRuizM/
 ## -- Getting Started 💪🏼☄️ --
 
 1. Clone the repo:
-   `git clone https://github.com/Adalab/modulo-3-evaluacion-final-LaiaRuizM.git`
+   `git clone https://github.com/LaiaRuizM/personal_project_AmznWeb.git`
 
 1. Install NPM packages:
    `npm install`

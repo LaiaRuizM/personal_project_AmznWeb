@@ -19,40 +19,44 @@ const LoginAccount = ({ username, handleUsername, errorMsg }) => {
   };
   return (
     <>
-      <div className="">
-        <Link to={"/products"} className="link">
-          <i className="fa-solid fa-angles-left arrow"> Back products</i>
-        </Link>
-      </div>
-      <form className="form" onSubmit={handleSubmit}>
-        <label className="form__label">
-          Username: {}
-          <input
-            type="text"
-            value={username}
-            onChange={handleInputNameChange}
-            className="share"
-          />
-        </label>
-        <br />
-        <label className="form__label">
-          Password: {}
-          <input
-            type="password"
-            value={password}
-            onChange={handleInputPasswordChange}
-            className="share"
-          />
-        </label>
-        <Link to={"/welcome"} className="link">
-          <input type="submit" value="Sign in" className="login"></input>
-        </Link>
-        {errorMsg && (
-          <>
-            <p>The username or password provided were incorrect or are empty</p>
-          </>
-        )}
-      </form>
+      <section className="section">
+        <div className="">
+          <Link to={"/products"} className="link">
+            <i className="fa-solid fa-angles-left arrow"> Back products</i>
+          </Link>
+        </div>
+        <form className="form" onSubmit={handleSubmit}>
+          <label className="form__label">
+            Username: {}
+            <input
+              type="text"
+              value={username}
+              onChange={handleInputNameChange}
+              className="share"
+            />
+          </label>
+          <br />
+          <label className="form__label">
+            Password: {}
+            <input
+              type="password"
+              value={password}
+              onChange={handleInputPasswordChange}
+              className="share"
+            />
+          </label>
+          <Link to={"/welcome"} className="link">
+            <input type="submit" value="Sign in" className="login"></input>
+          </Link>
+          {errorMsg && (
+            <>
+              <p>
+                The username or password provided were incorrect or are empty
+              </p>
+            </>
+          )}
+        </form>
+      </section>
     </>
   );
 };
