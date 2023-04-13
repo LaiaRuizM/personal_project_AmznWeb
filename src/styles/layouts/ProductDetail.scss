@@ -21,7 +21,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-    // background-image: url('../../images/stars.gif');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -32,8 +31,6 @@
         flex-direction: column;
         font-family: 'Indie Flower', cursive;
         text-align: center;
-        //background: radial-gradient(rgba(253, 187, 45, 0.7), rgba(34, 193, 195, 0.6));
-        //background: radial-gradient(rgb(247, 161, 0), rgba(70, 71, 71, 0.6));
         background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
         width: 400px;
         padding-top: 10px;
@@ -131,3 +128,36 @@
     color: black;
     display: flex;
 };
+@media (min-width: 768px) {
+    .box {
+        justify-content: space-between;
+        &__link {
+            font-size: 18px;
+        }
+    }
+    .img {
+        width: 200px;
+    }
+    .productDetails {
+        flex-direction: row;
+        &__article {
+            width: 500px;
+            padding: 20px;
+        }
+        &__information {
+            font-size: 18px;
+        }
+        .product {
+            margin-top: 0;
+            margin-left: 20px;
+        }
+    }
+    .form {
+        flex-direction: row;
+        &__label {
+            font-size: 18px;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+    }
+}

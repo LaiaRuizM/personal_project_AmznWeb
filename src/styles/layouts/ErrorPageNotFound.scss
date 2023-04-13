@@ -17,3 +17,28 @@
         padding-left: 50px;
     }
 }
+@media (min-width: 768px) {
+    .section__warning {
+        padding-top: 50px;
+        margin: 50px;
+        font-size: 22px;
+        background-position: 50%;
+        height: 80vh
+    &--span {
+        padding-left: 70px;
+    }
+    }
+}
+@media (min-width: 1024px) {
+    .section__warning {
+        padding-top: 150px;
+        margin: 100px;
+        font-size: 28px;
+        background-position: 40%;
+        height: 60vh;
+        height: 80vh 
+        &--span {
+            padding-left: 100px;
+        }
+    }
+}

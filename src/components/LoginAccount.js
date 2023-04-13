@@ -25,24 +25,28 @@ const LoginAccount = ({ username, handleUsername, errorMsg }) => {
             <i className="fa-solid fa-angles-left arrow"> Back products</i>
           </Link>
         </div>
-        <form className="form" onSubmit={handleSubmit}>
-          <label className="form__label">
+        <form className="formLog" onSubmit={handleSubmit}>
+          <label className="labelLogin">
             Username: {}
             <input
               type="text"
               value={username}
               onChange={handleInputNameChange}
               className="share"
+              placeholder="Please, fill in"
+              required
             />
           </label>
           <br />
-          <label className="form__label">
+          <label className="labelLogin">
             Password: {}
             <input
               type="password"
               value={password}
               onChange={handleInputPasswordChange}
               className="share"
+              placeholder="Please, fill in"
+              required
             />
           </label>
           <Link to={"/welcome"} className="link">

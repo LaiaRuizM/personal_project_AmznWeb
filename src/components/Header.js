@@ -15,7 +15,7 @@ const Header = () => {
         </Link>
       </header>
       <nav className="nav">
-        <ul className="nav__lists">
+        <ul className="nav__listsHeader">
           <li>
             <Link className="nav__link" to={"/products"}>
               <i class="fa-solid fa-list"></i> Products

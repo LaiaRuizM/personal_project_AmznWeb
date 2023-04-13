@@ -8,17 +8,14 @@
     font-weight: bold;
     gap: 10px;
     background: linear-gradient(to right, rgb(236, 236, 229), #000000);
-
     @media (min-width: 768px) {
         font-size: 25px;
     }
-
     @media (min-width: 1024px) {
         flex-direction: row;
         font-size: 30px;
     }
 }
-
 .reset__btn {
     display: flex;
     justify-content: center;
@@ -34,9 +31,18 @@
     cursor: move;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease-in-out;
-
     &:hover {
         background: linear-gradient(to right, orange, #ec38bc, #7303c0, cyan);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    @media (min-width: 768px) {
+        width: 70px;
+        font-size: 10px;
+        border-radius: 20px;
+    }
+    @media (min-width: 1024px) {
+        width: 90px;
+        font-size: 12px;
+        border-radius: 25px;
     }
 }

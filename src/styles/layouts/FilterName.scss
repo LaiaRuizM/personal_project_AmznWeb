@@ -6,10 +6,33 @@
     background-color: #ecf0f1;
     color: #444444;
     box-shadow: 3px 2px 4px hsl(29, 93%, 64%);
-
     &:focus {
         outline: none;
         border: 2px solid salmon;
         box-shadow: 2px 0 5px hsl(122, 63%, 46%);
+    }
+}
+@media (min-width: 768px) {
+    .section__warning {
+        padding-top: 50px;
+        margin: 50px;
+        font-size: 22px;
+        background-position: 50%;
+        height: 80vh;
+        &--span {
+            padding-left: 70px;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .section__warning {
+        padding-top: 150px;
+        margin: 100px;
+        font-size: 28px;
+        background-position: 40%;
+        height: 60vh;
+        &--span {
+            padding-left: 100px;
+        }
     }
 }

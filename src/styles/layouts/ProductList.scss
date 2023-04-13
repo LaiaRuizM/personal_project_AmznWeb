@@ -17,3 +17,10 @@
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+    .btn {
+        width: 200px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
