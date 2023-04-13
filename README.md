@@ -40,11 +40,11 @@
 - Loader: more time.
 - Create new account with validations if the email has already exist.
 - Add favorites and delete them.
-- In shopping cart: Make a table, add up the products prices, add filters, put it as a table and put a number in the shopping cart when the user add some product there.
-- Make an own API.
+- In shopping cart: Render a table, add up the products prices, add filters, put it as a table and put a number in the shopping cart when the user add some product there.
+- Make my own API.
 - Logout and login with funcionality and validations.
 - History prices.
-- Login: The error appears quickly, make it appear more time.
+- Login: The error disappears quickly, make it appear longer.
 
 <!-- ## -- Project Link: --
 
