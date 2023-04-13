@@ -25,61 +25,65 @@ const ProductDetail = ({
   };
   return selectProductFound ? (
     <>
-      <div className="box">
-        <Link className="box__link" to={"/products"}>
-          <i className="fa-solid fa-angles-left"> Go back to products</i>
-        </Link>
-      </div>
-      <div className="box">
-        <Link className="box__link" to={"/shoppingCart"}>
-          <i className="fa-solid fa-angles-right">
-            {""} Return to cart <i class="fa-solid fa-cart-shopping"></i>
-          </i>
-        </Link>
-      </div>
-      <section className="productDetails">
-        <article className="productDetails__article">
-          <div>
-            <img
-              className="img"
-              src={selectProductFound.image}
-              alt={`Photography of ${selectProductFound.title}`}
-            />
-          </div>
-          <article />
-          <h2 className="productDetails__title">{selectProductFound.title}</h2>
-          <ul className="productDetails__information">
-            <li>
-              Status:{" "}
-              {selectProductFound.price
-                ? "Available"
-                : "Temporarily out of stock"}
-            </li>
-            <li>price: {selectProductFound.price + " " + "$"}</li>
-          </ul>
-          <button
-            className="button"
-            onClick={(ev) => handleAddToCart(ev, selectProductFound)}
-          >
-            Add to cart <i class="fa-solid fa-cart-shopping"></i>
-          </button>
-          <div>
-            <form className="form" onSubmit={handleOnSubmit}>
-              <label className="form__label">
-                If you want to share with your Amazon's friends, here you have
-                the link!
-              </label>
-              <input
-                className="share"
-                readOnly
-                autoComplete="off"
-                type="text"
-                name="search"
-                value={window.location}
+      <section className="sectionDetail">
+        <div className="box">
+          <Link className="box__link" to={"/products"}>
+            <i className="fa-solid fa-angles-left"> Go back to products</i>
+          </Link>
+        </div>
+        <div className="box">
+          <Link className="box__link" to={"/shoppingCart"}>
+            <i className="fa-solid fa-angles-right">
+              {""} Return to cart <i class="fa-solid fa-cart-shopping"></i>
+            </i>
+          </Link>
+        </div>
+        <section className="productDetails">
+          <article className="productDetails__article">
+            <div>
+              <img
+                className="img"
+                src={selectProductFound.image}
+                alt={`Photography of ${selectProductFound.title}`}
               />
-            </form>
-          </div>
-        </article>
+            </div>
+            <article />
+            <h2 className="productDetails__title">
+              {selectProductFound.title}
+            </h2>
+            <ul className="productDetails__information">
+              <li>
+                Status:{" "}
+                {selectProductFound.price
+                  ? "Available"
+                  : "Temporarily out of stock"}
+              </li>
+              <li>price: {selectProductFound.price + " " + "$"}</li>
+            </ul>
+            <button
+              className="button"
+              onClick={(ev) => handleAddToCart(ev, selectProductFound)}
+            >
+              Add to cart <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <div>
+              <form className="form" onSubmit={handleOnSubmit}>
+                <label className="form__label">
+                  If you want to share with your Amazon's friends, here you have
+                  the link!
+                </label>
+                <input
+                  className="share"
+                  readOnly
+                  autoComplete="off"
+                  type="text"
+                  name="search"
+                  value={window.location}
+                />
+              </form>
+            </div>
+          </article>
+        </section>
       </section>
     </>
   ) : (

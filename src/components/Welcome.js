@@ -7,7 +7,7 @@ const Welcome = ({ username, handleUsername, errorMsg }) => {
   };
 
   return (
-    <section>
+    <section className="sectionWelcome">
       <Link to={"/products"} className="link">
         <button type="submit" className="login" onClick={handleChange}>
           Sign out
