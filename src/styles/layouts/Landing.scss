@@ -50,7 +50,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 55%;
-        height: 100vh;
+        height: 88.5vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -72,7 +72,7 @@
             text-align: center;
             @media (min-width: 1024px) {
                 font-size: 30px;
-                margin-bottom: 50px;
+                margin-left: 500px;
             }
         }
         &__title {
@@ -92,8 +92,8 @@
             text-align: center;
             @media (min-width: 1024px) {
                 font-size: 70px;
-                margin-right: 100px;
-                margin-top: 250px;
+                margin-right: 300px;
+                margin-top: 75px;
             }
         }
     }
