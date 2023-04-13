@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "./static/css/main.edcc0d11.css",
+    "main.js": "./static/js/main.e988357c.js",
+    "static/media/estrellitaylaia.png": "./static/media/estrellitaylaia.d960a6bd687b05185fa0.png",
+    "static/media/loader.gif": "./static/media/loader.871590180039321f866c.gif",
+    "static/media/logo2.png": "./static/media/logo2.bd1b72c71a6ac8aa97e1.png",
+    "static/media/landing2.jpg": "./static/media/landing2.19e7cd2daa3cd2d8fc06.jpg",
+    "static/media/removebckgr.png": "./static/media/removebckgr.e08aa5042b74f53849af.png",
+    "static/media/notFound.png": "./static/media/notFound.b5a2e89747314149a9c5.png",
+    "index.html": "./index.html",
+    "main.edcc0d11.css.map": "./static/css/main.edcc0d11.css.map",
+    "main.e988357c.js.map": "./static/js/main.e988357c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edcc0d11.css",
+    "static/js/main.e988357c.js"
+  ]
+}
